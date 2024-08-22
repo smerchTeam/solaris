@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://klydayt.github.io/project/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Executor</title>
+    <link rel="stylesheet" type="text/css" href="./Solaris Executor_files/styles.css">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Solaris Executor">
+    <meta property="og:description" content="Раскройте свои способности в написании сценариев в Roblox с Solaris! Запускайте пользовательские Lua-скрипты, автоматизируйте задачи и улучшайте игровой процесс.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1268466874056966167/1269265629417050203/image.png?ex=66af6f3b&amp;is=66ae1dbb&amp;hm=209ebc5ade6a5ac424d95d6c6073b3605a47256dc8593cda7569daa41682e02d&amp;">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta property="og:color" content="#b30000"> <!-- Optional, not all platforms support this -->
+
+    <!-- Twitter Card Meta Tags (for better cross-platform support) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solaris Executor">
+    <meta name="twitter:description" content="Раскройте свои способности в написании сценариев в Roblox с Solaris! Запускайте пользовательские Lua-скрипты, автоматизируйте задачи и улучшайте игровой процесс.">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1268466874056966167/1269265629417050203/image.png?ex=66af6f3b&amp;is=66ae1dbb&amp;hm=209ebc5ade6a5ac424d95d6c6073b3605a47256dc8593cda7569daa41682e02d&amp;">
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="https://klydayt.github.io/project/#" class="nav-link" data-target="top">Главная</a>
+            <a href="https://klydayt.github.io/project/#about" class="nav-link" data-target="#about">О нас</a>
+            <a href="https://klydayt.github.io/project/#warning" class="nav-link" data-target="#warning">Предупреждение</a>
+        </div>
+    </header>
+    <div class="logo-container">
+        <img src="./Solaris Executor_files/image.png" alt="Logo" class="logo" style="transform: rotateX(133.365deg) rotateY(10.3908deg);">
+    </div>
+    <h1 id="home">Добро пожаловать в Solaris Executor</h1>
+    <p>Раскройте свои способности в написании сценариев в Roblox с Solaris! Запускайте пользовательские Lua-скрипты, автоматизируйте задачи и улучшайте игровой процесс.</p>
+    <p>Скачайте Solaris прямо сейчас и улучшите свой опыт игры в Roblox!</p>
+    <!-- Add the blue "Download" button -->
+    <a href="https://discord.gg/F85y9eUHDu" class="download-button" target="_blank">Download</a>
+    <div id="about" class="about-section">
+        <h2>О нас</h2>
+        <p>Solaris Executor - это мощный Lua-executor для Roblox, который позволяет запускать пользовательские Lua-скрипты, автоматизировать задачи и улучшать игровой процесс в Roblox. С Solaris вы сможете открыть новые возможности и поднять свой опыт в Roblox на новый уровень.</p>
+    </div>
+    <div id="warning" class="warning-section">
+        <h2>Предупреждение</h2>
+        <p>Наш инжектор не будет обнаружен, и вас не забанят.</p>
+    </div>
+    <footer></footer>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('data-target');
+                if (targetId === 'top') {
+                    // Scroll to the top of the page
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            const logo = document.querySelector('.logo');
+            const { clientX: mouseX, clientY: mouseY } = event;
+            const { offsetWidth: width, offsetHeight: height } = logo;
+            const { left, top } = logo.getBoundingClientRect();
+            const centerX = left + width / 2;
+            const centerY = top + height / 2;
+            const deltaX = mouseX - centerX;
+            const deltaY = mouseY - centerY;
+            const rotateX = (deltaY / height) * 10; // Max 10 degrees rotation
+            const rotateY = -(deltaX / width) * 10; // Max 10 degrees rotation
+            logo.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    </script>
+
+
+</body></html>
