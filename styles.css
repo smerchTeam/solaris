@@ -1,0 +1,208 @@
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Additional styles */
+body {
+    background: linear-gradient(to top right, #b30000, #330000); /* Dark red gradient */
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadeInBody 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items at the start */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0;
+}
+
+/* Navigation Tabs */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Ensure content is not hidden behind the fixed navbar */
+body::before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin-top: -60px;
+}
+
+/* Navigation Links */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Logo Styles with 3D Effect */
+.logo-container {
+    position: relative;
+    width: 300px;
+    height: auto;
+    perspective: 1000px;
+    margin-top: 80px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    -webkit-user-drag: none; /* For Chrome/Safari */
+    -moz-user-drag: none; /* For Firefox */
+    -ms-user-drag: none; /* For Internet Explorer/Edge */
+    pointer-events: none;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #FFFF00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeInDown 2s ease-in-out;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 22px;
+    margin: 0 10px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Download Button Styles */
+.download-button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.download-button:hover {
+    background-color: #e03e00;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.download-button:active {
+    background-color: #ff4500;
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Section Styles */
+.about-section {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #ffcc00;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Warning Section Styles */
+.warning-section {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.warning-section h2 {
+    font-size: 36px;
+    color: #ff0000;
+}
+
+.warning-section p {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in animation for the body */
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
